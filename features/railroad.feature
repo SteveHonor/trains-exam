@@ -52,5 +52,5 @@ Feature: Provide to my customers information about the routes
 
   Scenario: Number of different routes between two towns with a distance of less than 30
     Given the number of different routes from C to C with a distance of less than 30
-    When compute the distance between cities "A,E,D"
+    When compute the distance between cities "C,C"
     Then it should display the following message: "Output #10: 7"
