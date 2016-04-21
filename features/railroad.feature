@@ -8,49 +8,49 @@ Feature: Provide to my customers information about the routes
   Scenario: Compute the distance between cities "A,B,C"
     Given that I have the cities "A,B,C"
     When compute the distance between cities "A,B,C"
-    Then it should display the following message: "Output # 1: 9"
+    Then it should display the following output: "9"
 
   Scenario: Compute the distance between cities "A,D"
     Given that I have the cities "A,D"
     When compute the distance between cities "A,D"
-    Then it should display the following message: "Output #2: 5"
+    Then it should display the following output: "5"
 
   Scenario: Compute the distance between cities "A,D,C"
     Given that I have the cities "A,D,C"
     When compute the distance between cities "A,D,C"
-    Then it should display the following message: "Output #3: 13"
+    Then it should display the following output: "13"
 
   Scenario: Compute the distance between cities "A,E,B,C,D"
     Given that I have the cities "A,E,B,C,D"
     When compute the distance between cities "A,E,B,C,D"
-    Then it should display the following message: "Output #4: 22"
+    Then it should display the following output: "22"
 
   Scenario: Compute the distance between cities "A,E,D"
     Given that I have the cities "A,E,D"
     When compute the distance between cities "A,E,D"
-    Then it should display the following message: "Output #5: NO SUCH ROUTE"
+    Then it should display the following output: "NO SUCH ROUTE"
 
   Scenario: find all paths with a maximum of 3 stops
     Given the number of trips starting at "C" and ending at "C" with a maximum of 3 stops
-    When compute the distance between cities "A,E,D"
-    Then it should display the following message: "Output #6: 2"
+    When compute the distance between cities "C" and "C" with a maximum of 3 stops
+    Then it should display the following output: "2"
 
   Scenario: find all paths exactly with exactly 4 stops
-    Given the number of trips starting at A and ending at C with exactly 4 stops
-    When compute the distance between cities "A,E,D"
-    Then it should display the following message: "Output #7: 3"
+    Given the number of trips starting at "A" and ending at "C" with exactly 4 stops
+    When compute the distance between cities "A" and "C" with exactly 4 stops
+    Then it should display the following output: "3"
 
   Scenario: Shortest route between two towns
     Given the length of the shortest route between cities "A,C"
-    When compute the distance between cities "A,E,D"
-    Then it should display the following message: "Output #8: 9"
+    When compute the shortest distance between cities "A" and "C"
+    Then it should display the following output: "9"
 
   Scenario: Shortest route between two towns
     Given the length of the shortest route between cities "B,B"
-    When compute the distance between cities "A,E,D"
-    Then it should display the following message: "Output #9: 9"
+    When compute the shortest distance between cities "B" and "B"
+    Then it should display the following output: "9"
 
-  Scenario: Number of different routes between two towns with a distance of less than 30
-    Given the number of different routes from C to C with a distance of less than 30
-    When compute the distance between cities "C,C"
-    Then it should display the following message: "Output #10: 7"
+  Scenario: Number of different routes between two towns
+    Given the number of different routes from cities "C,C"
+    When compute the distance between cities "C" to "C" with a distance of less than 30
+    Then it should display the following output: "7"
