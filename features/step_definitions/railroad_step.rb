@@ -1,6 +1,3 @@
-require 'byebug'
-require './train'
-
 Given(/^that I have the cities "([^"]*)"$/) do | cities |
   validate_cities cities
 end
