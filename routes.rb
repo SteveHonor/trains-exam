@@ -6,7 +6,7 @@ require 'byebug'
 require_relative "decorator/output_decorator"
 
 # Require all files of path model
-Dir[File.join("model/**/*.rb")].reverse.each do |file|
+Dir[File.join("model/**/*.rb")].each do |file|
   require_relative file
 end
 
